@@ -13,8 +13,19 @@
 [![Min SDK](https://img.shields.io/badge/Min%20SDK-24-blue?style=for-the-badge)](https://android-arsenal.com/api?level=24)
 [![Target SDK](https://img.shields.io/badge/Target%20SDK-36-green?style=for-the-badge)](https://android-arsenal.com/api?level=36)
 [![Font](https://img.shields.io/badge/Typography-Iran%20Yekan-E67E22?style=for-the-badge)](https://fontiran.com)
+[![Direct APK Download](https://img.shields.io/badge/Download%20APK-Direct%20Link-D4AF37?style=for-the-badge&logo=android&logoColor=black)](https://s33.uupload.ir/files/mshajkarami/Polaris_Test/polaris.apk)
+
+<br/>
+
+<a href="https://s33.uupload.ir/files/mshajkarami/Polaris_Test/polaris.apk">
+  <img src="https://img.shields.io/badge/📥%20دانلود%20مستقیم%20فایل%20نصبی%20(APK)-polaris.apk-D4AF37?style=for-the-badge&logo=android&logoColor=black" alt="Download APK" />
+</a>
 
 </div>
+
+> [!TIP]
+> 📥 **دانلود مستقیم نسخه آماده (APK):** جهت تست و اجرای مستقیم اپلیکیشن بر روی دستگاه یا شبیه‌ساز، می‌توانید فایل APK را مستقیماً از لینک روبرو دریافت نمایید:  
+> 👉 **[دانلود مستقیم اپلیکیشن polaris.apk](https://s33.uupload.ir/files/mshajkarami/Polaris_Test/polaris.apk)**
 
 ---
 
@@ -175,6 +186,21 @@
 ├── build.gradle.kts
 └── settings.gradle.kts
 ```
+
+---
+
+## 📥 دانلود مستقیم فایل نصبی (Download APK)
+
+جهت نصب و اجرای فوری اپلیکیشن بدون نیاز به کامپایل یا بیلد سورس‌کد، فایل نصبی نهایی را مستقیماً دانلود نمایید:
+
+<div align="center">
+
+[![Download polaris.apk](https://img.shields.io/badge/DOWNLOAD-polaris.apk-D4AF37?style=for-the-badge&logo=android&logoColor=black)](https://s33.uupload.ir/files/mshajkarami/Polaris_Test/polaris.apk)
+
+**لینک مستقیم:**  
+[`https://s33.uupload.ir/files/mshajkarami/Polaris_Test/polaris.apk`](https://s33.uupload.ir/files/mshajkarami/Polaris_Test/polaris.apk)
+
+</div>
 
 ---
 
