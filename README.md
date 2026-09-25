@@ -1,9 +1,5 @@
 # Polaris Team Portfolio — اپلیکیشن معرفی تیم پولاریس
 
-<div align="center">
-
-![Polaris Team](app/src/main/res/mipmap-xxhdpi/ic_launcher.webp)
-
 # POLARIS SOFTWARE DEVELOPMENT COMPANY
 ### *تیمی از برنامه‌نویس‌ها برای ساختن آینده‌ای بهتر*
 
