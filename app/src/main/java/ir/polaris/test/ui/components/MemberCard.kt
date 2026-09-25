@@ -1,6 +1,7 @@
 package ir.polaris.test.ui.components
 
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -28,7 +29,9 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -44,10 +47,10 @@ import ir.polaris.test.ui.theme.PolarisTextPrimary
 import ir.polaris.test.ui.theme.PolarisTextSecondary
 
 /**
- * Recreates the exact Member Card from the reference image:
+ * Recreates the exact Member Card from the reference website:
+ * - Real member photo from website assets
  * - Number badge (01, 02, etc.)
  * - Ghost watermark typography in background
- * - Cinematic dark portrait silhouette
  * - Persian name and English role
  * - Persian description
  * - Outlined tech badges at bottom
@@ -68,27 +71,40 @@ fun MemberCard(
             .clickable { onClick() }
             .testTag("member_card_${member.number}")
     ) {
-        // Background Portrait / Moody Cinematic Canvas Art
-        MemberCardArtwork(
-            memberNumber = member.number,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(180.dp)
-        )
+        // Background Portrait / Photo from website
+        if (member.photoRes != null) {
+            Image(
+                painter = painterResource(id = member.photoRes),
+                contentDescription = "${member.name} - ${member.role}",
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(200.dp)
+                    .clip(RoundedCornerShape(topStart = 8.dp, topEnd = 8.dp))
+            )
+        } else {
+            MemberCardArtwork(
+                memberNumber = member.number,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(180.dp)
+            )
+        }
 
         // Subtle gradient overlay for readability of text
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(200.dp)
+                .height(205.dp)
                 .background(
                     Brush.verticalGradient(
                         colors = listOf(
                             Color.Transparent,
-                            Color(0xCC0F1014),
+                            Color(0x220F1014),
+                            Color(0xBB0F1014),
                             Color(0xFF0F1014)
                         ),
-                        startY = 60f
+                        startY = 40f
                     )
                 )
         )

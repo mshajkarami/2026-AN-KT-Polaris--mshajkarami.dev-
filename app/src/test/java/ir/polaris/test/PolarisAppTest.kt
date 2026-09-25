@@ -61,4 +61,18 @@ class PolarisAppTest {
         assertTrue(fontRes1 != 0)
         assertTrue(fontRes2 != 0)
     }
+
+    @Test
+    fun `verify team members have photos from website`() {
+        TeamData.teamMembers.forEach { member ->
+            assertNotNull(member.photoRes)
+            assertTrue(member.photoRes != 0)
+        }
+    }
+
+    @Test
+    fun `verify website hero content matches`() {
+        assertEquals("تیمی از برنامه‌نویس‌ها برای ساختن آینده‌ای بهتر.", TeamData.HERO_TITLE)
+        assertTrue(TeamData.HERO_DESCRIPTION.contains("ما در پولاریس"))
+    }
 }

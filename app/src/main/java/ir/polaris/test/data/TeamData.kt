@@ -1,5 +1,6 @@
 package ir.polaris.test.data
 
+import ir.polaris.test.R
 import ir.polaris.test.model.CollaborationStep
 import ir.polaris.test.model.Project
 import ir.polaris.test.model.Responsibility
@@ -11,9 +12,9 @@ object TeamData {
     const val APP_TITLE = "Test"
     const val TEAM_SUBTITLE = "Polaris Team"
     const val POLARIS_EYEBROW = "POLARIS SOFTWARE DEVELOPMENT COMPANY"
-    const val HERO_TITLE = "Test — یک تیم، چند تخصص، یک هدف"
+    const val HERO_TITLE = "تیمی از برنامه‌نویس‌ها برای ساختن آینده‌ای بهتر."
     const val HERO_DESCRIPTION =
-        "ما گروهی از برنامه‌نویسان و متخصصان فناوری هستیم که با ترکیب مهارت‌ها و تجربه‌های مختلف، برای ساخت یک محصول مشترک کنار هم قرار گرفته‌ایم."
+        "ما در پولاریس روی طراحی و توسعه محصولات نرم‌افزاری مدرن، سریع و قابل اعتماد کار می‌کنیم. هر عضو تیم در یک حوزه تخصصی فعالیت دارد."
 
     const val ABOUT_TEST_TITLE = "درباره تیم Test"
     const val ABOUT_TEST_CONTENT =
@@ -32,7 +33,7 @@ object TeamData {
 
     const val REPRESENTATIVE_TITLE = "نماینده گروه"
     const val REPRESENTATIVE_ROLE = "Team Representative"
-    const val REPRESENTATIVE_NAME = "نام نماینده (منتخب تیم)"
+    const val REPRESENTATIVE_NAME = "حسین (Fullstack Developer)"
     const val REPRESENTATIVE_DESCRIPTION =
         "نماینده مسئول هماهنگی اعضا، پیگیری وظایف و ارتباط با مدیریت Polaris است."
 
@@ -46,12 +47,13 @@ object TeamData {
             role = "Frontend Developer",
             bio = "توسعه رابط‌های مدرن، ریسپانسیو و سریع با تمرکز روی تجربه کاربری.",
             skills = listOf("HTML", "CSS", "JavaScript", "Responsive Design"),
-            technologies = listOf("JavaScript", "CSS", "HTML", "TypeScript"),
+            technologies = listOf("HTML", "CSS", "JavaScript"),
             projects = listOf("پورتال وب پولاریس", "دیزاین سیستم وب"),
             github = "https://github.com/polaris-test",
             linkedin = "https://linkedin.com",
             telegram = "https://t.me",
-            isRepresentative = false
+            isRepresentative = false,
+            photoRes = R.drawable.member1
         ),
         TeamMember(
             id = "member-02",
@@ -61,27 +63,29 @@ object TeamData {
             role = "Backend Developer",
             bio = "طراحی API، معماری سمت سرور و پیاده‌سازی سرویس‌های قابل توسعه.",
             skills = listOf("Node.js", "Python", "API", "Microservices"),
-            technologies = listOf("Node.js", "Python", "API", "PostgreSQL"),
+            technologies = listOf("Node.js", "Python", "API"),
             projects = listOf("سرویس احراز هویت", "میکروسرویس‌های ارزیابی"),
             github = "https://github.com/polaris-test",
             linkedin = "https://linkedin.com",
             telegram = "https://t.me",
-            isRepresentative = false
+            isRepresentative = false,
+            photoRes = R.drawable.member2
         ),
         TeamMember(
             id = "member-03",
             number = "03",
             name = "حسین",
-            englishName = "HOSSEIN",
+            englishName = "HOSEIN",
             role = "Fullstack Developer",
             bio = "اتصال فرانت‌اند و بک‌اند و ساخت اپلیکیشن‌های کامل با معماری تمیز.",
             skills = listOf("React", "Node.js", "SQL", "Clean Architecture"),
-            technologies = listOf("React", "Node.js", "SQL", "Next.js"),
+            technologies = listOf("React", "Node.js", "SQL"),
             projects = listOf("داشبورد مدیریت یکپارچه", "ماژول همگام‌سازی داده"),
             github = "https://github.com/polaris-test",
             linkedin = "https://linkedin.com",
             telegram = "https://t.me",
-            isRepresentative = true
+            isRepresentative = true,
+            photoRes = R.drawable.member3
         ),
         TeamMember(
             id = "member-04",
@@ -90,13 +94,14 @@ object TeamData {
             englishName = "SARINA",
             role = "UI/UX & Frontend",
             bio = "طراحی تجربه‌های کاربری ساده و زیبا و تبدیل طراحی به رابط واقعی.",
-            skills = listOf("Figma", "UI/UX Design", "React", "Design Systems"),
-            technologies = listOf("Figma", "UI", "React", "Tailwind"),
+            skills = listOf("Figma", "UI", "React", "Design Systems"),
+            technologies = listOf("Figma", "UI", "React"),
             projects = listOf("سیستم طراحی پولاریس", "پروتوتایپ اپلیکیشن موبایل"),
             github = "https://github.com/polaris-test",
             linkedin = "https://linkedin.com",
             telegram = "https://t.me",
-            isRepresentative = false
+            isRepresentative = false,
+            photoRes = R.drawable.member4
         ),
         TeamMember(
             id = "member-05",
@@ -106,12 +111,13 @@ object TeamData {
             role = "DevOps & Infrastructure",
             bio = "مدیریت زیرساخت، استقرار پروژه‌ها و پایدار نگه‌داشتن سرویس‌ها.",
             skills = listOf("Linux", "Docker", "CI/CD", "Cloud Architecture"),
-            technologies = listOf("CI/CD", "Docker", "Linux", "Kubernetes"),
+            technologies = listOf("Linux", "Docker", "CI/CD"),
             projects = listOf("پایپ‌لاین استقرار پیوسته", "پایش و مانیتورینگ سلامت سرویس"),
             github = "https://github.com/polaris-test",
             linkedin = "https://linkedin.com",
             telegram = "https://t.me",
-            isRepresentative = false
+            isRepresentative = false,
+            photoRes = R.drawable.member5
         )
     )
 

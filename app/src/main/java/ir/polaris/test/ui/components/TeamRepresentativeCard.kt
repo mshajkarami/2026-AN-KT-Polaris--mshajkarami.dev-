@@ -1,5 +1,6 @@
 package ir.polaris.test.ui.components
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
@@ -19,6 +20,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -33,6 +36,8 @@ import ir.polaris.test.ui.theme.PolarisTextSecondary
 fun TeamRepresentativeCard(
     modifier: Modifier = Modifier
 ) {
+    val rep = TeamData.teamMembers.firstOrNull { it.isRepresentative }
+
     Box(
         modifier = modifier
             .fillMaxWidth()
@@ -45,33 +50,45 @@ fun TeamRepresentativeCard(
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Golden star badge
-                Box(
-                    modifier = Modifier
-                        .size(36.dp)
-                        .clip(CircleShape)
-                        .background(Color(0xFF262015))
-                        .border(1.dp, PolarisGold, CircleShape),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = "✦",
-                        color = PolarisGoldBright,
-                        fontSize = 16.sp
+                if (rep?.photoRes != null) {
+                    Image(
+                        painter = painterResource(id = rep.photoRes),
+                        contentDescription = rep.name,
+                        contentScale = ContentScale.Crop,
+                        modifier = Modifier
+                            .size(46.dp)
+                            .clip(CircleShape)
+                            .border(1.5.dp, PolarisGold, CircleShape)
                     )
+                } else {
+                    // Golden star badge
+                    Box(
+                        modifier = Modifier
+                            .size(36.dp)
+                            .clip(CircleShape)
+                            .background(Color(0xFF262015))
+                            .border(1.dp, PolarisGold, CircleShape),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = "✦",
+                            color = PolarisGoldBright,
+                            fontSize = 16.sp
+                        )
+                    }
                 }
 
                 Spacer(modifier = Modifier.width(12.dp))
 
                 Column {
                     Text(
-                        text = TeamData.REPRESENTATIVE_TITLE,
+                        text = rep?.name ?: TeamData.REPRESENTATIVE_TITLE,
                         fontSize = 17.sp,
                         fontWeight = FontWeight.Bold,
                         color = PolarisTextPrimary
                     )
                     Text(
-                        text = TeamData.REPRESENTATIVE_ROLE,
+                        text = "${TeamData.REPRESENTATIVE_TITLE} • ${rep?.role ?: TeamData.REPRESENTATIVE_ROLE}",
                         fontSize = 11.5.sp,
                         color = PolarisGold,
                         fontWeight = FontWeight.Medium

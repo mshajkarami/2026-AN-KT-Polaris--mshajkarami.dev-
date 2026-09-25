@@ -1,5 +1,7 @@
 package ir.polaris.test.model
 
+import androidx.annotation.DrawableRes
+
 data class TeamMember(
     val id: String,
     val number: String,
@@ -13,5 +15,7 @@ data class TeamMember(
     val github: String?,
     val linkedin: String?,
     val telegram: String?,
-    val isRepresentative: Boolean = false
+    val isRepresentative: Boolean = false,
+    @get:DrawableRes val photoRes: Int? = null
 )
+
