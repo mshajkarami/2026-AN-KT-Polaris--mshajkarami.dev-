@@ -1,0 +1,6 @@
+{
+  "name": "Test",
+  "description": "Native Android application for the Polaris Test Team in recruitment assessment.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
